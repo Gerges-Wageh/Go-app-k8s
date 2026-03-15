@@ -5,7 +5,7 @@ metadata:
 spec:
   type: NodePort
   selector:
-    app: go-service
+    app: go-app
   ports:
     - port: 80        # service port
       targetPort: 3000 # container port

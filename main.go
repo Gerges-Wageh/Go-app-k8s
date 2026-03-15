@@ -130,7 +130,7 @@ type PageData struct {
 }
 
 func handler(w http.ResponseWriter, r *http.Request) {
-
+	w.Header().Set("Connection", "close")
 	host, err := os.Hostname()
 	if err != nil {
 		host = "unknown"
