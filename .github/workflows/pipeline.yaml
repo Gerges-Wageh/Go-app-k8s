@@ -16,7 +16,7 @@ jobs:
     - name: Set up Go
       uses: actions/setup-go@v4
       with:
-        go-version: 1.21
+        go-version: 1.24
 
     - name: Build Go binary
       run: go build -o app main.go
@@ -29,8 +29,8 @@ jobs:
 
     - name: Build and push Docker image
       run: |
-        docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/go-node-app:latest .
-        docker push ${{ secrets.DOCKERHUB_USERNAME }}/go-node-app:latest
+        docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/podpulse:latest .
+        docker push ${{ secrets.DOCKERHUB_USERNAME }}/podpulse:latest
 
     - name: Set up kubectl
       uses: azure/setup-kubectl@v3
