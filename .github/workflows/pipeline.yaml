@@ -31,13 +31,3 @@ jobs:
       run: |
         docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/podpulse:latest .
         docker push ${{ secrets.DOCKERHUB_USERNAME }}/podpulse:latest
-
-    - name: Set up kubectl
-      uses: azure/setup-kubectl@v3
-      with:
-        version: 'v1.35.0'
-
-    - name: Deploy to Minikube / KIND
-      run: |
-        kubectl apply -f k8s/deployment.yaml
-        kubectl apply -f k8s/service.yaml
