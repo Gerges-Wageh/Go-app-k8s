@@ -1,4 +1,4 @@
-# Go-App-K8s 🌐🚀
+# PodPulse-K8s 🌐🚀
 
 A hands‑on Kubernetes demo application built in Go — designed to demonstrate core Kubernetes concepts, multi‑node cluster behavior, and a full **CI/CD pipeline** using **GitHub Actions**.
 
