@@ -7,6 +7,6 @@ spec:
   selector:
     app: go-app
   ports:
-    - port: 80        # service port
-      targetPort: 3000 # container port
-      nodePort: 30550 # accessible from localhost
+    - port: 80
+      targetPort: 3000
+  sessionAffinity: None   # Important! disables sticky sessions
